@@ -4,7 +4,7 @@ Inspired by the Anker app 💡, I tried to recreate it a little. The sensors are
 I spent a lot of time to this 'Integration' 😉
 
 
-<img src="https://github.com/ChrisMac715/ha-energy-house/blob/main/anker_app.png" alt="Anker App" title="Anker App" align="left" height="65px"/> </div>
+<img src="https://github.com/ChrisMac715/ha-energy-house/blob/main/anker_app.png" alt="Anker App" title="Anker App" align="left" height="100px"/> </div>
 
 Source: https://beta.ankersolix.com/de
 
