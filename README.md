@@ -25,4 +25,4 @@ It was not possible to install the Shelly Pro 3EM in the central distribution ca
 ## Samples
 
 <img src="sample1.png" height="500">
-<img src="sample2.png" height="500">
+<img src="sample2.png" weight="500">
