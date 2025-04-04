@@ -3,10 +3,7 @@
 Inspired by the Anker app 💡, I tried to recreate it a little. The sensors are mainly from the Anker Solarbank 2 1600 AC and Shelly Pro 3EM.
 I spent a lot of time to this 'Integration' 😉
 
-
-<img src="https://github.com/ChrisMac715/ha-energy-house/blob/main/anker_app.png" alt="Anker App" title="Anker App" align="left" height="200px"/> </div><br>
-
-![Anker App](anker_app.png)
+![Anker App](anker_app.png | height=200p)
 
 Source: https://beta.ankersolix.com/de
 
