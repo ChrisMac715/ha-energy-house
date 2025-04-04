@@ -1,0 +1,198 @@
+type: picture-elements
+elements:
+  - type: conditional
+    elements:
+      - type: state-label
+        entity: sensor.solarbank_2_e1600_ac_akkuleistung
+        style:
+          left: 48%
+          top: 78%
+        suffix: " >> "
+      - type: state-label
+        entity: sensor.solarbank_2_e1600_ac_ladestand
+        style:
+          left: 60%
+          top: 78%
+    conditions:
+      - condition: and
+        conditions:
+          - condition: state
+            entity: sensor.solarbank_2_e1600_ac_cloud_zustand
+            state: online
+          - condition: numeric_state
+            entity: sensor.solarbank_2_e1600_ac_akkuleistung
+            above: 0
+    title: Solarbank laden
+  - type: state-label
+    entity: sensor.wohnung_leistungsbedarf_gesamt_mittelwert_5min_watt
+    style:
+      left: 88%
+      top: 89%
+  - type: conditional
+    conditions:
+      - condition: state
+        entity: input_boolean.eco_mode
+        state: "on"
+    elements:
+      - type: icon
+        icon: mdi:leaf-circle
+        style:
+          left: 18%
+          top: 85%
+          color: white
+          "--mdc-icon-size": 80px
+    title: Eco Mode
+  - type: conditional
+    elements:
+      - type: image
+        style:
+          left: 83%
+          top: 63%
+          width: 10%
+          height: 10%
+        image: /local/dryer.png
+        hold_action:
+          action: none
+    conditions:
+      - condition: or
+        conditions:
+          - condition: numeric_state
+            entity: sensor.tasmota_energy_power_2
+            above: 20
+          - condition: numeric_state
+            entity: sensor.tasmota_energy_power
+            above: 20
+    title: Trockner oder Waschmaschine läuft
+  - type: conditional
+    elements:
+      - type: state-label
+        entity: sensor.solarbank_2_e1600_ac_akkuleistung
+        style:
+          left: 48%
+          top: 78%
+        suffix: " <<"
+      - type: state-label
+        entity: sensor.solarbank_2_e1600_ac_ladestand
+        style:
+          left: 60%
+          top: 78%
+    conditions:
+      - condition: and
+        conditions:
+          - condition: state
+            entity: sensor.solarbank_2_e1600_ac_cloud_zustand
+            state: online
+          - condition: numeric_state
+            entity: sensor.solarbank_2_e1600_ac_akkuleistung
+            below: 0
+    title: Solarbank entladen
+  - type: conditional
+    elements:
+      - type: state-label
+        entity: sensor.solarbank_2_e1600_ac_ladestand
+        style:
+          left: 53%
+          top: 78%
+    conditions:
+      - condition: and
+        conditions:
+          - condition: state
+            entity: sensor.solarbank_2_e1600_ac_cloud_zustand
+            state: online
+          - condition: numeric_state
+            entity: sensor.solarbank_2_e1600_ac_akkuleistung
+            above: -1
+            below: 3
+    title: Solarbank Standby
+  - type: conditional
+    conditions:
+      - condition: or
+        conditions:
+          - condition: state
+            entity: sensor.keller_power_total
+            state_not: unavailable
+          - condition: state
+            entity: sensor.keller_power_total
+            state_not: unknown
+    elements:
+      - type: image
+        image: /local/images/warning.png
+        style:
+          left: 88%
+          top: 78%
+          width: 10%
+          height: 10%
+    title: Warnung Keller Verbindung
+  - type: conditional
+    title: Solarbank online
+    elements:
+      - type: state-label
+        entity: select.solarbank_2_e1600_ac_benutzermodus
+        style:
+          left: 18%
+          top: 78%
+      - type: state-label
+        style:
+          left: 60%
+          top: 7%
+        entity: sensor.solarbank_2_e1600_ac_solarleistung
+      - type: state-label
+        entity: sensor.solarbank_2_e1600_ac_dc_ausgangsleistung
+        style:
+          left: 63%
+          top: 65%
+      - type: state-label
+        entity: sensor.wohnung_leistungsbedarf_gesamt_dashboard
+        style:
+          left: 88%
+          top: 7%
+    conditions:
+      - condition: state
+        entity: sensor.solarbank_2_e1600_ac_cloud_zustand
+        state: online
+  - type: conditional
+    conditions:
+      - condition: or
+        conditions:
+          - condition: state
+            entity: sensor.solarbank_2_e1600_ac_cloud_zustand
+            state_not: online
+    elements:
+      - type: image
+        image: /local/images/warning.png
+        style:
+          left: 53%
+          top: 78%
+          width: 10%
+          height: 10%
+      - type: image
+        image: /local/images/warning.png
+        style:
+          left: 17%
+          top: 78%
+          width: 10%
+          height: 10%
+      - type: image
+        image: /local/images/warning.png
+        style:
+          left: 60%
+          top: 7%
+          width: 10%
+          height: 10%
+      - type: image
+        image: /local/images/warning.png
+        style:
+          left: 88%
+          top: 7%
+          width: 10%
+          height: 10%
+      - type: image
+        image: /local/images/warning.png
+        style:
+          left: 63%
+          top: 66%
+          width: 10%
+          height: 10%
+    title: Solarbank offline
+theme: ios-dark-mode-blue-red
+image: /api/image/serve/15cfe85eb1d22465ec8a1e69c937f0d8/512x512
