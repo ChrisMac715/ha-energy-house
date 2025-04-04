@@ -3,8 +3,6 @@
 Inspired by the Anker app 💡, I tried to recreate it a little. The sensors are mainly from the Anker Solarbank 2 1600 AC and Shelly Pro 3EM.
 I spent a lot of time to this 'Integration' 😉
 
-![Anker App](anker_app.png)
-
 <p>
 <img src="anker_app.png" height="300">
 <img src="dashboard.png" height="300">
