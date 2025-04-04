@@ -1,4 +1,4 @@
-# Energy House for Home Assistant
+# Picture Elements Energy House for Home Assistant
 
 Inspired by the Anker app 💡, I tried to recreate it a little. The sensors are mainly from the Anker Solarbank 2 1600 AC and Shelly Pro 3EM.
 I spent a lot of time to this 'Integration' 😉
@@ -24,3 +24,5 @@ It was not possible to install the Shelly Pro 3EM in the central distribution ca
 
 ## Samples
 
+<img src="sample1.png" height="500">
+<img src="sample1.png" height="500">
