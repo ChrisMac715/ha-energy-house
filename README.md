@@ -5,6 +5,11 @@ I spent a lot of time to this 'Integration' 😉
 
 ![Anker App](anker_app.png)
 
+<p>
+<img src="anker_app.png" height="300">
+<img src="dashboard.png" height="300">
+</p>
+
 Source: https://beta.ankersolix.com/de
 
 It was not possible to install the Shelly Pro 3EM in the central distribution cabinet. This was installed in the apartment. In the basement, Tasmota sockets are connected via an LTE router so that the energy values can be read out. For this reason, there are also two pictures, with and without the basement.
@@ -12,6 +17,7 @@ It was not possible to install the Shelly Pro 3EM in the central distribution ca
 ## Funtions
 
 - If sensors are unavailable or unknown, a warning icon will be shown
+- If Basement is offline a warning icon will be shown and different sensors will be used
 
 ## Additional Resources
 
